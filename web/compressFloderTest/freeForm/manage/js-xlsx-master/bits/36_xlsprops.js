@@ -1,0 +1,1 @@
+function xlml_set_prop(e,s,t){switch(s){case"Description":s="Comments";break}e[s]=t}

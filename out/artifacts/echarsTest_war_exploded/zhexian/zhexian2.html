@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>折线图1</title>
+    <script src="../echars/echarts.js"></script>
+    <script src="../static/layui/layer.js"></script>
+    <script src="../static/layui/layui.all.js"></script>
+    <script src="/static/layui/layui.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="1">
+    <h3>ooooo</h3>
+</div>
+
+<script>
+
+  /*  layui.use(['layer', 'form'], function(){
+        var layer = layui.layer
+            ,form = layui.form;
+        layer.msg('Hello World');
+    });*/
+
+  var opt = {
+      controlType: "LOGO",
+      content: ["请输入内容", '#1'],
+      type: 4,
+      tips: [2, "#4794ec"],
+      time: 5000,
+      area: 'auto',
+      shade: 0,
+      //maxWidth: 500
+  }
+
+  $("#1").on({
+
+      mouseenter: function () {
+          layer.open(opt);
+      }/*, mouseleave: function () {
+                layer.close(tips);
+            }*/
+  })
+</script>
+
+
+</body>
+
+
+</html>

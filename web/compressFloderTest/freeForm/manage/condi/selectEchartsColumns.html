@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置维度度量</title>
+    <!--jquery-->
+    <script type="text/javascript" src="../../../static/jquery/jquery-1.10.2.min.js"></script>
+    <!--jqueryUI-->
+    <link rel="stylesheet" href="../../../static/jqueryUI1.12.1/jquery-ui.min.css" type="text/css"/>
+    <!--css-->
+    <link rel="stylesheet" href="../../../CSS/css/public.css"/>
+    <!--layui-->
+    <link rel="stylesheet" href="../../../dm/model/css/layui.css">
+    <script src="../../../static/layui2.4.2/layui.all.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../../static/bootstrap/bootstrap.css"/>
+    <!--vue-->
+    <script type="text/javascript" src="../../../static/vue/vue.js"></script>
+    <!--elementui-->
+    <link rel="stylesheet" href="../../../static/vue/elementui/elementui.css"/>
+    <script type="text/javascript" src="../../../static/vue/elementui/elementui.js"></script>
+    <!--common-->
+    <script type="text/javascript" src="../../../static/pubjs/ycdcommon.js"></script>
+    <script type="text/javascript" src="../../../static/pubjs/common.js"></script>
+    <script type="text/javascript" src="selectEchartsCols.js"></script>
+</head>
+<style>
+
+    [v-cloak] {
+        display: none
+    }
+
+    .dragArea {
+        height: calc(100% - 3.1rem);
+        overflow:auto;
+        border-right: 1px #daddec solid;
+    }
+
+    .dragOut {
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+
+    .dropOut {
+        float: right;
+        width: 60%;
+        height: 100%;
+    }
+
+    .title {
+        height: 2rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0.5rem 0 0.5rem 0;
+
+    }
+
+    .dmArea {
+        padding: 1rem;
+        height: calc(50% - 3.1rem);
+        width: 100%;
+        border: 1px dashed #699ffb;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-radius: 10px;
+        background-color: #f7f9ff;
+    }
+
+    .dropDownItem {
+        float: left;
+        margin: 0.5rem;
+        margin-right: 2rem;
+    }
+
+    #footer {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .el-tree-node {
+        height: 2.5rem;
+    }
+
+    .tree-node__label {
+        color: #8c8a90;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+
+    .el-footer {
+        border-top: 2px solid #699ffb;
+        height: 60px;
+    }
+
+
+</style>
+<body>
+<el-container id="app" class="ww hh" v-cloak>
+
+    <el-main id="main" class="ww hh" :selectedObj="selectedObj">
+        <div class="dragOut float-l">
+            <p class="title">维度度量</p>
+            <div class="ww dragArea">
+                <el-tree
+                        ref="treeRef"
+                        :prop="props"
+                        :data=treeData
+                        :draggable="draggable"
+                        @node-drag-start="treeNodeDragStart"
+                        @node-drag-over="treeNodeDragOver"
+                        @node-drag-end="treeNodeDragEnd"
+                        :allow-drop="allowDrop">
+                </el-tree>
+            </div>
+        </div>
+        <div class="dropOut float-l">
+            <p class="title">维度</p>
+            <div id="dropDimension" class="dmArea dropArea" @drop="dropDM" @dragover.prevent>
+                <div v-for="(item, index) in DIMENSION"
+                     @dragstart="dropDMdragStart"
+                     @dragend="dropDMdragEnd"
+                     @dragenter="dropDMdragEnter(item,$event)"
+                     :key="item.FIELD_NAME"
+                     :field-name="item.FIELD_NAME"
+                     draggable="true"
+                     class="dropDownItem">
+                    <el-dropdown size="medium"
+                                 split-button
+                                 type="primary"
+                                 trigger="click"
+                                 @command="handleDMCommand">
+                        {{item.FIELD_NAMECN}}
+                        <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item :command="'delete-DIMENSION-'+item.FIELD_NAME">删除</el-dropdown-item>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </div>
+            </div>
+
+            <p class="title">度量</p>
+            <div id="dropMeasure" class="dmArea dropArea" @drop="dropDM" @dragover.prevent>
+                <div v-for="(item, index) in MEASURE"
+                     @dragstart="dropDMdragStart"
+                     @dragend="dropDMdragEnd"
+                     @dragenter="dropDMdragEnter(item,$event)"
+                     :key="item.FIELD_NAME"
+                     :field-name="item.FIELD_NAME"
+                     draggable="true"
+                     class="dropDownItem">
+                    <el-dropdown
+                            size="medium"
+                            split-button
+                            trigger="click"
+                            type="primary"
+                            @command="handleDMCommand">
+                        {{item.FIELD_NAMECN}}
+                        <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item :command="'setting-MEASURE-'+item.FIELD_NAME">基础信息设置</el-dropdown-item>
+                            <el-dropdown-item :command="'delete-MEASURE-'+item.FIELD_NAME">删除</el-dropdown-item>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </div>
+            </div>
+        </div>
+    </el-main>
+
+    <el-footer id="footer">
+        <!--按钮-->
+        <el-button type="primary" icon="el-icon-success" @click="save">确定</el-button>
+        <el-button type="primary" icon="el-icon-error" @click="close">关闭</el-button>
+    </el-footer>
+</el-container>
+
+</body>
+</html>
+
+
+
+
+

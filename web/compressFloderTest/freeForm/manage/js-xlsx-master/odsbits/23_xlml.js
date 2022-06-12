@@ -1,0 +1,1 @@
+function xlml_normalize(r){if(has_buf&&Buffer.isBuffer(r))return r.toString("utf8");if(typeof r==="string")return r;throw"badf"}var xlmlregex=/<(\/?)([a-z0-9]*:|)([\w-]+)[^>]*>/gm;

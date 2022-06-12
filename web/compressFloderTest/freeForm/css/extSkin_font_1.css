@@ -1,0 +1,144 @@
+/*body*/
+body{
+    font-family: 宋体 !important;
+    font-size: 1.1rem;
+}
+/*input*/
+.ds-form-item-label{
+    font-family: 宋体 !important;
+    font-size: 1.2rem;
+}
+.el-input__inner{
+    font-family: 宋体 !important;
+    font-size: 1.1rem;
+}
+/*textarea*/
+.el-textarea__inner{
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+/*inputnumber*/
+/*rich*/
+.edui-default .edui-editor-bottomContainer  {
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+/*jseditor*/
+.el-input-group__prepend{
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+.el-input-group__append{
+    font-size: 1.1rem;
+    font-family: 宋体 !important;
+}
+/*htmleditor*/
+/*csseditor*/
+/*select*/
+.el-select-dropdown__item{
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+/*cascader*/
+.el-cascader-node{
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+/*radio*/
+.el-radio__label{
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+/*checkbox*/
+.el-checkbox__label{
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+/*switch*/
+/*slider*/
+.el-tooltip__popper{
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+/*time*/
+.el-time-spinner__item,.el-time-panel__btn{
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+/*timerange*/
+/*date*/
+.el-date-picker__header-label{
+    font-size: 1.2rem ;
+    font-family: 宋体 !important;
+    font-weight: bold;
+}
+.el-date-table{
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+/*daterange*/
+.el-date-range-picker__header{
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+/*rate*/
+.el-rate__text{
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+/*color*/
+/*upload*/
+.el-button{
+    font-size: 1.1rem ;
+    font-family: 宋体 !important;
+}
+/*row*/
+/*menu*/
+.el-submenu__title,.el-menu-item{
+    font-size: 1.2rem !important;
+    font-family: 宋体 !important;
+}
+/*tree*/
+.el-tree-node__content span{
+    font-size: 1.2rem !important;
+    font-family: 宋体;
+}
+/*table*/
+.el-table .el-table__header-wrapper .cell{
+    font-size: 1.2rem !important;
+    font-family: 宋体 !important;
+}
+.el-table .el-table__body-wrapper .cell{
+    font-size: 1.1rem !important;
+    font-family: 宋体 !important;
+}
+/*steps*/
+.el-step__title,.el-step__description{
+    font-family: 宋体 !important;
+}
+/*tabs*/
+.el-tabs__item span{
+    font-size: 1.3rem !important;
+    font-family: 宋体 !important;
+}
+/*progress*/
+.el-progress-bar__innerText{
+    font-size: 1.1rem !important;
+    font-family: 宋体 !important;
+}
+/*timeline*/
+.el-timeline-item__content{
+    font-size: 1.2rem !important;
+    font-family: 宋体 !important;
+}
+.el-timeline-item__timestamp{
+    font-size: 1.1rem !important;
+    font-family: 宋体 !important;
+}
+[class*=" icon-"],[class^=icon-] {
+    font-family: "iconfont" !important;
+    font-size: 1.1rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

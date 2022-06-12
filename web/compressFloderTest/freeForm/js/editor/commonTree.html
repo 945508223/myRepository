@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!--jquery-->
+    <script type="text/javascript" src="../../../static/jquery/jquery-1.10.2.min.js"></script>
+    <!--jqueryUI-->
+    <link rel="stylesheet" href="../../../static/jqueryUI1.12.1/jquery-ui.min.css" type="text/css"/>
+    <!--layui-->
+    <link rel="stylesheet" href="../../../dm/model/css/layui.css">
+    <script src="../../../static/layui2.4.2/layui.all.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../../static/bootstrap/bootstrap.css"/>
+    <!--vue-->
+    <script type="text/javascript" src="../../../static/vue/vue.js"></script>
+    <!--elementui-->
+    <link rel="stylesheet" href="../../../static/vue/elementui/elementui.css"/>
+    <script type="text/javascript" src="../../../static/vue/elementui/elementui.js"></script>
+    <!--css-->
+    <link rel="stylesheet" href="../../css/pubcss/css/public.css"/>
+    <!--common-->
+    <script type="text/javascript" src="../../../static/pubjs/ycdcommon.js"></script>
+    <script type="text/javascript" src="../../../static/pubjs/common.js"></script>
+    <link rel="stylesheet" href="css/commonTree.css"/>
+    <script type="text/javascript" src="commonTree.js"></script>
+    <title></title>
+</head>
+<body>
+<el-container id="commonTree" class="box">
+    <el-header id="input" class="center">
+        <!--输入框-->
+        <el-input v-model="inputVal"
+                  placeholder="请输入搜索内容"
+                  prefix-icon="el-icon-search"
+                  clearable
+                  @change="inputValChange"
+                  autosize>
+        </el-input>
+    </el-header>
+
+    <el-main id="tree">
+        <!--树-->
+        <!--通过传递的配置对象设置属性  参照elementui官方文档 属性中 " - " 替换为 " _ "-->
+        <!--
+            default-expand-all:是否默认展开所有节点	boolean	—	false
+            highlight-current:是否选中高亮
+            show-checkbox:是否显示复选框
+            node-key:节点唯一id 字段
+            props:树节点字段 子节点字段
+            check-strictly:在显示复选框的情况下，是否严格的遵循父子不互相关联的做法，默认为 false
+            indent:相邻级节点间的水平缩进，单位为像素	number
+        -->
+        <el-tree v-loading="loading"
+                 class="ww hh"
+                 ref="treeRef"
+                 :default-expand-all="cfg.default_expand_all"
+                 :highlight-current="true"
+                 :show-checkbox="cfg.show_checkbox"
+                 :data="treeData"
+                 :node-key="cfg.node_key"
+                 :props="cfg.props"
+                 :check-strictly="cfg.check_strictly"
+                 :indent="cfg.indent"
+                 :filter-node-method="filterNode"
+                 :check-on-click-node="cfg.check_on_click_node"
+                 :expand-on-click-node="cfg.expand_on_click_node"
+                 :current-node-key="cfg.current_node_key"
+                 :default-expanded-keys="cfg.default_expanded_keys"
+                 :default-checked-keys="cfg.default_checked_keys"
+                 ref="treeRef">
+
+        </el-tree>
+    </el-main>
+
+    <el-footer id="button">
+        <!--按钮-->
+        <el-button type="primary"
+                   icon="el-icon-success"
+                   @click="_confirmClick">确定
+        </el-button>
+        <el-button
+                v-if="cfg.showCancelBtn"
+                type="primary"
+                icon="el-icon-error"
+                @click="_cancel">取消
+        </el-button>
+        <el-button
+                type="primary"
+                icon="el-icon-error"
+                @click="_close">关闭
+        </el-button>
+    </el-footer>
+
+</el-container>
+</body>
+
+<script>
+    var commonTree = new Vue({
+        el: '#commonTree',
+        data: {
+            firstFilter: true,
+            treeData: [],//树数据
+            cfg: {},//树配置信息
+            inputVal: '',//输入框内容
+            loading: true,//开启loading效果
+            key: '',//配置信息的key
+            sourceName: "",
+            sourceOptions: [],
+            label: ""
+        },
+        created() {
+            //获取配置信息 加载数据
+            this.initData();
+        },
+        computed: {},
+        methods: {
+            initData: initData,
+            _confirmClick: confirmClick,
+            _close: close,
+            inputValChange: inputValChange,
+            filterNode: filterNode,
+            _cancel:cancel
+        }
+    })
+</script>
+</html>

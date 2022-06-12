@@ -1,0 +1,144 @@
+/*<div className="labelalign">
+    <p>
+        <span style="color:#06f8fb;font-size:12px;">一般公共预算 句容市:<br/></span>
+        <span style="color:#cef3ff;font-size:10px;">${GEN_PUB_BUD_AMT}<br/></span>
+        <span style="color:#cef3ff;font-size:10px;">第${TOTAL_AMT_DESC}名</span>
+    </p>
+    <div>*/
+
+//点击不同光柱 切换数据
+
+
+function changeData(checked) {
+    if (checked == "收入增幅") {
+        debugger
+        $("#ctrl_718120-191631659").attr("dv_labelreg", "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">\n" +
+            "    <p id=\"myplabel\" style=\"font-size:12px ;text-align:center\">\n" +
+            "        <span style=\"color:#ed2a31\">${GEN_PUB_BUD_YEAR_GROPER}%</span></br>\n" +
+            "        <span style=\"color:#000000\">第${GEN_PUB_BUD_YEAR_GROPER_DESC}名</span>\n" +
+            "    </p>\n" +
+            "</div>")
+        $("#ctrl_718120-191631659").attr("dv_labelreg_text", "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">\n" +
+            "    <p id=\"myplabel\" style=\"font-size:12px ;text-align:center\">\n" +
+            "        <span style=\"color:#000000\">${GEN_PUB_BUD_YEAR_GROPER}%</span></br>\n" +
+            "        <span style=\"color:#000000\">第${GEN_PUB_BUD_YEAR_GROPER_DESC}名</span>\n" +
+            "    </p>\n" +
+            "</div>")
+    }
+    if (checked == "一般公共预算收入") {
+        $("#ctrl_718120-191631659").attr("dv_labelreg", "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">${GEN_PUB_BUD_YEAR_AMT}亿<br/>第${GEN_PUB_BUD_YEAR_AMT_DESC}名</div>")
+        $("#ctrl_718120-191631659").attr("dv_labelreg_text", "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">${GEN_PUB_BUD_YEAR_AMT}亿<br/>第${GEN_PUB_BUD_YEAR_AMT_DESC}名</div>")
+    }
+    if (checked == "税占比") {
+        $("#ctrl_718120-191631659").attr("dv_labelreg", "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">${TAX_GENPUBDUD_YEAR_PER}%<br/>第${TAX_GENPUBDUD_YEAR_PER_DESC}名</div>")
+        $("#ctrl_718120-191631659").attr("dv_labelreg_text", "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">${TAX_GENPUBDUD_YEAR_PER}%<br/>第${TAX_GENPUBDUD_YEAR_PER}名</div>")
+    }
+
+    loadDataById("ctrl_718120-191631659");
+    // shouruText()
+}
+
+var cityMap = {
+    "句容市标签": "321183",
+    "丹徒区标签": "321112",
+    "润州区标签": "321111",
+    "丹阳市标签": "321181",
+    "京口区标签": "321102",
+    "扬中市标签": "321182",
+    "高新区标签": "321116",
+    "新区标签": "321115"
+}
+
+var urlMap = {
+    "收入增幅": "AC0484E6AD6648D1E0534901A8C07D3B",
+    "一般公共预算收入": "AC044655EA8048CFE0534901A8C06055",
+    "税占比": "AC044655EA7F48CFE0534901A8C06055",
+}
+
+
+//hover
+areaNames = [
+    "句容市标签",
+    "丹徒区标签",
+    "润州区标签",
+    "丹阳市标签",
+    "京口区标签",
+    "扬中市标签",
+    "高新区标签",
+    "新区标签"
+];
+
+for (var i = 0; i < areaNames.length; i++) {
+    var area = getElByName(areaNames[i])
+    $(area).addClass("transform")
+    $(area).hover(function () {
+            $(this).css("color", "#06f8fb")
+            //$(this).children(":first").children(":first").children(":first").css("color", "#06f8fb")
+            //console.log($(this).children(":first").children(":first").children(":first").text())
+            $(this).css("cursor", "pointer")
+        }, function () {
+            $(this).css("color", "#cef3ff")
+            // $(this).children(":first").children(":first").children(":first").css("color", "#cef3ff")
+            $(this).css("cursor", "default")
+        }
+    )
+}
+
+/**
+ * 市标签hover事件
+ * @type {*[]}
+ */
+var labelNames = [
+    "MAP_321183",
+    "MAP_321112",
+    "MAP_321111",
+    "MAP_321102",
+    "MAP_321181",
+    "MAP_321182",
+    "MAP_321116",
+    "MAP_321115"
+];
+for (var i = 0; i < labelNames.length; i++) {
+    var cityLabel = getElByName(labelNames[i]);
+    $(cityLabel).addClass("transform");
+    $(cityLabel).hover(function () {
+            $(this).children(":first").children(":first").css("font-weight", "bold");
+            $(this).css("cursor", "pointer")
+        }, function () {
+            $(this).children(":first").children(":first").css("font-weight", "normal");
+            $(this).css("cursor", "default")
+        }
+    )
+}
+
+//=========================================静态地图加载完毕,修改文本内容=======================================================
+var labelNames = [
+    "MAP_321183",
+    "MAP_321112",
+    "MAP_321111",
+    "MAP_321102",
+    "MAP_321181",
+    "MAP_321182",
+    "MAP_321116",
+    "MAP_321115"
+];
+shouruText();
+
+function shouruText() {
+    debugger
+    for (let i = 0; i < labelNames.length; i++) {
+        var labelEl = $($DV.getEl(labelNames[i])).find(".labelalign").find("p").find("span").eq(0);
+        // var pEl = $(labelEl).find("p");
+        if (labelEl.length > 0) {
+            var text = labelEl.text();
+            var textArr = text.split("%");
+            if (textArr.length>1) {
+                if(textArr[0]<0){
+                    textArr[0] = textArr[0]*-1;
+                    labelEl.css("color","#ff1a38");
+                    labelEl.text(textArr[0]+"%"+textArr[1])
+                }
+            }
+        }
+    }
+}

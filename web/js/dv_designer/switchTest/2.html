@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns: xmlns:>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        /*switch开关*/
+        .mui-switch {
+            width: 5em;
+            height: 3.2em;
+            position: relative;
+            border: 1px solid #dfdfdf;
+            background-color: #fdfdfd;
+            box-shadow: #dfdfdf 0 0 0 0 inset;
+            border-radius: 3em;
+            background-clip: content-box;
+            display: inline-block;
+            -webkit-appearance: none;
+            user-select: none;
+            outline: none;
+        }
+
+        .mui-switch:before {
+            content: '';
+            width: 3em;
+            height: 3em;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            border-radius: 3em;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        .mui-switch:checked:before {
+            left: 2em;
+        }
+
+        .mui-switch.mui-switch-anim {
+            transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s;
+        }
+
+        .mui-switch.mui-switch-anim:before {
+            transition: left 0.3s;
+        }
+
+        .mui-switch.mui-switch-anim:checked {
+            box-shadow: #64bd63 0 0 0 16px inset;
+            background-color: #64bd63;
+            transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s;
+        }
+
+        .mui-switch.mui-switch-anim:checked:before {
+            transition: left 0.3s;
+        }
+    </style>
+    <script language="javascript" src="../../static/jquery/jquery-2.0.js"></script>
+</head>
+<body>
+<div class="" data-control="BOX" id="Box_points_switch">
+    <label style="color:#FFFF00">
+        <input style="background-color: #0C0C0C" class="mui-switch mui-switch-anim"
+               type="checkbox" id="switch" onclick="return true">
+    </label>
+</div>
+
+<div style="width: 100% ;height: 100%">
+    <input type="checkbox" name="category" value="今日话题"/>今日话题
+    <input type="checkbox" name="category" value="视觉焦点"/>视觉焦点
+    <input type="checkbox" name="category" value="财经"/>财经
+    <input type="checkbox" name="category" value="汽车"/>汽车
+    <input type="checkbox" name="category" value="科技"/>科技
+    <input type="checkbox" name="category" value="房产"/>房产
+    <input type="checkbox" name="category" value="旅游"/>旅游
+</div>
+
+
+<div style="width: 100% ;height: 100%" id="mycheckbox"></div>
+<script type="text/javascript">
+    function change() {
+        var c = document.myform.mybox;
+        if (c.checked) {
+            c.checked = false;
+        } else {
+            c.checked = true;
+        }
+    }
+
+    $("#switch").change(function () {
+        if ($("input[type='checkbox']").is(':checked') == true) {
+            alert("ON");
+        } else {
+            alert("OFF");
+        }
+    });
+
+</script>
+</body>
+</html>

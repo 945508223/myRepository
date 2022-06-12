@@ -1,0 +1,122 @@
+.el-form-item__label{
+    font-weight: bold;
+}
+.el-table th{
+    background: #eaeef9
+}
+.el-table--border th, .el-table__fixed-right-patch {
+    border-bottom: 1px solid #a8d0e6;
+}
+.el-table td, .el-table th.is-leaf {
+    border-bottom: 1px dotted #a8d0e6;
+}
+.el-table--border td, .el-table--border th, .el-table__body-wrapper .el-table--border.is-scrolling-left ~ .el-table__fixed {
+    border-right: 1px solid #a8d0e6;
+}
+.el-table thead {
+    color: #000000;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.el-table {
+    font-size: 1rem;
+    color: #000000;
+}
+.el-table .el-input__inner{
+    height: 100% ;
+    border-radius: 0px;
+    font-size: 1rem;
+    padding: 0 0;
+}
+.el-table .el-input__icon{
+    line-height: 100%;
+}
+.el-table__body-wrapper{
+    height: calc(100% - 2.5rem);
+    overflow-y: auto;
+}
+.el-table .el-input{
+    height: 100% ;
+}
+.el-table--scrollable-x .el-table__body-wrapper {
+    z-index : 1;
+}
+.el-table__fixed-body-wrapper{
+    height: 100%;
+}
+.stepStyle{
+    height:calc(100% - 3.5rem);
+}
+.barStyle{
+    height:3.5rem;
+    background-color: #EEEEEE;
+}
+.formStyle{
+    width:50%;
+}
+.ul-all{
+    border: 1px solid #ebeef5;
+    border-radius: 4px;
+    height: calc(100% - 1rem);
+}
+.ul-title{
+    height: 2rem;
+    font-weight: bold;
+    background: #f5f7fa;
+    font-size: 1.1rem;
+}
+.ul-body{
+    height: calc(100% - 2rem);
+    background: #fff;
+    box-sizing: border-box;
+}
+.ul-body li{
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0 0.5rem;
+    font-size: 1rem;
+}
+.ul-body li:hover{
+    background: #E6EEF8;
+}
+#top{
+    height: 15rem;
+    padding: 0.5rem 0rem;
+    color: #909399;
+}
+#bottom{
+    height:calc(100% - 15rem);
+    padding: 0.5rem 0rem;
+}
+#extTop{
+    height:calc(100% - 3rem);
+    padding: 0.5rem 0rem;
+}
+#extBottom{
+    height: 3rem;
+    padding: 0.5rem 1rem;
+}
+#excelField{
+    width: 18%;
+}
+#contrast{
+    width: 10%;
+    height: 3rem;
+}
+#tableField{
+    width: 18%;
+}
+.modelGrid{
+    height: calc(100% - 3rem);
+}
+.modelPageer{
+    height: 3rem;
+}
+.addtType{
+    color: #409eff;
+}
+.el-button:focus, .el-button:hover {
+    color: #409EFF;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}

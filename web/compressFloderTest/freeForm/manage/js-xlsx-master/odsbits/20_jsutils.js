@@ -1,0 +1,1 @@
+var has_buf=typeof Buffer!=="undefined";function cc2str(r){var f="";for(var e=0;e!=r.length;++e)f+=String.fromCharCode(r[e]);return f}

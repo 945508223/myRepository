@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>度量设置</title>
+    <!--jquery-->
+    <script type="text/javascript" src="../../../static/jquery/jquery-1.10.2.min.js"></script>
+    <!--jqueryUI-->
+    <link rel="stylesheet" href="../../../static/jqueryUI1.12.1/jquery-ui.min.css" type="text/css"/>
+    <!--css-->
+    <link rel="stylesheet" href="../../../CSS/css/public.css"/>
+    <!--layui-->
+    <link rel="stylesheet" href="../../../dm/model/css/layui.css">
+    <script src="../../../static/layui2.4.2/layui.all.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../../static/bootstrap/bootstrap.css"/>
+    <!--vue-->
+    <script type="text/javascript" src="../../../static/vue/vue.js"></script>
+    <!--elementui-->
+    <link rel="stylesheet" href="../../../static/vue/elementui/elementui.css"/>
+    <script type="text/javascript" src="../../../static/vue/elementui/elementui.js"></script>
+    <!--common-->
+    <script type="text/javascript" src="../../../static/pubjs/ycdcommon.js"></script>
+    <script type="text/javascript" src="../../../static/pubjs/common.js"></script>
+
+    <style>
+        [v-cloak] {
+            display: none
+        }
+
+        #footer {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid #699ffb;
+        }
+
+        .el-form-item__label {
+            font-size:1.1rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+<div id="app" class="ww hh v-cloak">
+    <el-container id="app" class="ww hh" v-cloak>
+        <el-main id="main" class="ww hh">
+            <el-form ref="form" :model="form" label-width="20%" label-position="left" class="ww hh">
+                <el-form-item label="字段中文名">
+                    <el-input v-model="form.FIELD_NAMECN"></el-input>
+                </el-form-item>
+
+                <el-form-item label="保留小数位数">
+                    <el-input v-model="form.FIELD_DECLENGTH"></el-input>
+                </el-form-item>
+
+                <el-form-item label="单位">
+                    <el-select v-model="form.TENTHOUSAND" placeholder="请选择数据单位" >
+                        <el-option label="无" value="EMPTY"></el-option>
+                        <el-option label="百分数" value="0"></el-option>
+                        <el-option label="万元" value="1"></el-option>
+                        <el-option label="十万元" value="2"></el-option>
+                        <el-option label="百万元" value="3"></el-option>
+                        <el-option label="千万元" value="4"></el-option>
+                        <el-option label="亿元" value="5"></el-option>
+                    </el-select>
+                </el-form-item>
+
+                <el-form-item label="左右Y轴">
+                    <el-radio-group v-model="form.YAXIS">
+                        <el-radio label="left" >左Y轴</el-radio>
+                        <el-radio label="right">右Y轴</el-radio>
+                    </el-radio-group>
+                </el-form-item>
+            </el-form>
+        </el-main>
+
+        <el-footer id="footer">
+            <el-button type="primary" icon="el-icon-success" @click="sure">确定</el-button>
+            <el-button type="primary" icon="el-icon-error" @click="close">取消</el-button>
+        </el-footer>
+    </el-container>
+</div>
+</body>
+</html>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            key: "",
+            form: {
+                FIELD_NAMECN: '',
+                FIELD_DECLENGTH: 0,
+                TENTHOUSAND: 'EMPTY',
+                YAXIS: 'left'
+            }
+        },
+        created: function () {
+            this.key = YCDCommon.Win.getUrlParam("key");
+            this.form = window.top[this.key].info;
+        },
+        methods: {
+
+            close: function () {
+                close_();
+            },
+            sure: function () {
+                window.top[this.key].callback(this.form, this.key);
+                close_();
+            }
+        }
+    })
+</script>

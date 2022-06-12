@@ -1,0 +1,55 @@
+.topDiv{
+    height: 4rem;
+    padding: 0rem 1rem;
+}
+.centerDiv{
+    height: calc(100% - 4rem - 1px);
+}
+#bottomDiv{
+    height: 4rem;
+}
+#leftDiv{
+    width: calc(70% - 3rem);
+}
+#centerDiv{
+    width: 3rem;
+}
+#rightDiv{
+    width: 30%;
+}
+.divHeight{
+    height:calc(100% - 4rem - 1px);
+}
+#bottomDivInner{
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right{
+    justify-content: flex-end;
+}
+.left{
+    justify-content: flex-start;
+}
+.el-divider--horizontal {
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin: 0rem 0 !important;
+}
+#modelLabel{
+    width: 5rem;
+}
+#icon{
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.el-table__header-wrapper th .cell {
+    height: 100%;
+    line-height: 2.5rem;
+}

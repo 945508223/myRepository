@@ -1,0 +1,1 @@
+var rc_to_a1=function(){var n=/(^|[^A-Za-z])R(\[?)(-?\d+|)\]?C(\[?)(-?\d+|)\]?/g;var e;function r(n,r,t,a,c,o){var l=a.length>0?parseInt(a,10)|0:0,f=o.length>0?parseInt(o,10)|0:0;if(f<0&&c.length===0)f=0;if(c.length>0)f+=e.c;if(t.length>0)l+=e.r;return r+encode_col(f)+encode_row(l)}return function t(a,c){e=c;return a.replace(n,r)}}();

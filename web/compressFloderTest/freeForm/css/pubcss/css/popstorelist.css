@@ -1,0 +1,130 @@
+/*弹窗界面布局*/
+.popwbox{
+	width:100%;
+	height:100%;
+	background-color:#F6F7FD;
+	overflow:hidden;
+}
+.popwbox-left{
+	float:left;
+	width:180px;
+	height:100%;
+}
+.popwbox-left-main{
+	width:100%;
+	height:100%;
+	overflow:auto;
+	background:#2F48B2;
+	background:-moz-linear-gradient(top,#2F67D5 0%,#2E2A8E 100%);
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#2F67D5),color-stop(100%,#2E2A8E));
+	background:-webkit-linear-gradient(top,#2F67D5 0%,#2E2A8E 100%);
+	background:-o-linear-gradient(top,#2F67D5 0%,#2E2A8E 100%);
+	background:-ms-linear-gradient(top,#2F67D5 0%,#2E2A8E 100%);
+	background:linear-gradient(to bottom,#2F67D5 0%,#2E2A8E 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2F67D5',endColorstr='#2E2A8E',GradientType=0);
+}
+.popwbox-right{
+	overflow:hidden;
+	height:100%;
+}
+.popwbox-right-top{
+	width:100%;
+	height:44px;
+	line-height:40px;
+	padding-right:10px;
+	text-align:right;
+}
+.popwbox-right-top button{
+	height:28px;
+	line-height:26px;
+	font-size:12px;
+	font-weight:bold;
+	color:#578AE5;
+	border:1px solid #ABCCF9;
+	background-color:#F2F5FA;
+	border-radius:2px;
+}
+.popwbox-right-top button i{
+	margin-right:4px;
+}
+.popwbox-right-top button:hover{
+	color:#fff;
+	border-color:#6FA0F7;
+	background-color:#6FA0F7;
+}
+.popwbox-right-content{
+	width:100%;
+	height: calc(100% - 54px);
+	height: -webkit-calc(100% - 54px);
+	height: -moz-calc(100% - 54px);
+}
+.popwbox-right-main{
+	width:100%;
+	height:100%;
+}
+
+/* 滚动条样式 */
+/* 左侧导航栏 */
+.nl-main-1::-webkit-scrollbar {
+ width: 10px;
+ height: 10px;
+}
+.nl-main-1::-webkit-scrollbar-track {
+ -webkit-border-radius: 2em;
+ -moz-border-radius: 2em;
+ border-radius:2em;
+}
+.nl-main-1::-webkit-scrollbar-thumb {
+ background-color:#c0c0c0;
+ -webkit-border-radius: 2em;
+ -moz-border-radius: 2em;
+ border-radius:2em;
+}
+.nl-main-1::-webkit-scrollbar-corner {
+	display:none
+}
+/*表格-行内按钮样式*/
+.datagrid-body .operate-btn {
+	background: url(../../CSS/img/zyborder_07.png) no-repeat center;
+	background-size: 100% 33px;
+	padding: 5px 10px;
+	color: #fff;
+	cursor: pointer;
+}
+.datagrid-body .operate-btn:hover {
+	color: #3fc0ff;
+}
+/* 表格滚动条样式 */
+.datagrid-body::-webkit-scrollbar {
+ width: 10px;
+ height: 10px;
+}
+.datagrid-body::-webkit-scrollbar-track {
+ -webkit-border-radius: 2em;
+ -moz-border-radius: 2em;
+ border-radius:2em;
+}
+.datagrid-body::-webkit-scrollbar-thumb {
+ background-color:#c0c0c0;
+ -webkit-border-radius: 2em;
+ -moz-border-radius: 2em;
+ border-radius:2em;
+}
+.datagrid-body::-webkit-scrollbar-corner {
+	display:none
+}
+/* 响应式 */
+@media screen and (max-width:1000px){
+	.box .header .header-center .hc-ul .hc-li .hc-li-a{
+		width: 80px;
+		height: 33px;
+		font-size: 14px;
+	}
+}
+@media screen and (max-width:790px){
+	.box .header .header-center .hc-ul .hc-li .hc-li-a{
+		width: 60px;
+		height: 33px;
+		font-size: 10px;
+	}
+}

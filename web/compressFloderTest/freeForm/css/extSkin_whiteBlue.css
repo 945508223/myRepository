@@ -1,0 +1,36 @@
+.current-row td {
+    background-color: rgb(214,230,255) !important;
+}
+.el-tabs__item{
+    background: #F5F6F7;
+}
+.el-tabs__item.is-active {
+    color: #FFFFFF;
+    background: -webkit-linear-gradient(top,#01A2FE,#1282F4,#2273EE);
+    background: -moz-linear-gradient(top,#01A2FE,#1282F4,#2273EE);
+}
+.el-tabs__nav-wrap {
+    border-bottom: 1px solid #cccccc;
+    height: 2.5rem;
+}
+.el-tabs--card > .el-tabs__header {
+    border-bottom: 1px solid #cccccc;
+    height: 2.5rem;
+}
+.el-tabs__header .moreBtn{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-top: 0.5rem;
+}
+.el-tabs__nav-scroll,
+.el-tabs--card > .el-tabs__header .el-tabs__nav,
+.el-tabs--card > .el-tabs__header .el-tabs__item.is-active,
+.el-tabs--card > .el-tabs__header .el-tabs__item,
+.el-tabs__nav-next, .el-tabs__nav-prev{
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+.el-tabs__content{
+    width: 100%;
+    height: calc(100% - 2.5rem);
+}

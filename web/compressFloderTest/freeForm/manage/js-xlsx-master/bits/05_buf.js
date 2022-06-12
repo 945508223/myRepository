@@ -1,0 +1,1 @@
+var has_buf=typeof Buffer!=="undefined";function new_raw_buf(r){return new(has_buf?Buffer:Array)(r)}function s2a(r){if(has_buf)return new Buffer(r,"binary");return r.split("").map(function(r){return r.charCodeAt(0)&255})}var bconcat=function(r){return[].concat.apply([],r)};var chr0=/\u0000/g,chr1=/[\u0001-\u0006]/;

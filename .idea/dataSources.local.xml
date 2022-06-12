@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="SX_BMP" uuid="6f88e3d9-68c4-46eb-b236-e80c0458510f">
+      <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production&#10;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="12.2.0.1.0" dbms="ORACLE" exact-version="11.2.0.4.0" exact-driver-version="12.2">
+        <extra-name-characters>$#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>SX_BMP_PORTAL</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="PUBLIC" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="SX_CONSOLE_PORTAL" uuid="8b28e6d0-29c4-4d5b-a1e5-9f892f7c8e16">
+      <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production&#10;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="12.2.0.1.0" dbms="ORACLE" exact-version="11.2.0.4.0" exact-driver-version="12.2">
+        <extra-name-characters>$#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>SX_CONSOLE_PORTAL</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="PUBLIC" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="甘肃BMP" uuid="294fb875-7dfd-4ab8-ac3f-58caccedc824">
+      <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production&#10;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="12.2.0.1.0" dbms="ORACLE" exact-version="11.2.0.4.0" exact-driver-version="12.2">
+        <extra-name-characters>$#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>BMP_PORTAL</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="PUBLIC" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="@10.10.17.118_SX_CONSOLE_PORTAL" uuid="78060a1d-9d88-4254-9b6c-ad50d2d6c426">
+      <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production&#10;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="12.2.0.1.0" dbms="ORACLE" exact-version="11.2.0.4.0" exact-driver-version="12.2">
+        <extra-name-characters>$#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>SX_CONSOLE_PORTAL</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="182.92.155.2_SX_CONSOLO_PORTAL" uuid="ec4a053d-2b60-417a-9de0-9c7ed5647b11">
+      <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production&#10;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="12.2.0.1.0" dbms="ORACLE" exact-version="11.2.0.4.0" exact-driver-version="12.2">
+        <extra-name-characters>$#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>SX_CONSOLE_PORTAL</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="PUBLIC" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="182.92.155.2_BMP_PORTAL" uuid="0ea8afe7-58dc-438d-acfd-fb4118d32de2">
+      <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production&#10;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="12.2.0.1.0" dbms="ORACLE" exact-version="11.2.0.4.0" exact-driver-version="12.2">
+        <extra-name-characters>$#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>SX_BMP_PORTAL</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="182.92.155.2_BMP_PORTAL [2]" uuid="b8f9e01a-8bc5-4943-9073-f7848455e0b0">
+      <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production&#10;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="12.2.0.1.0" dbms="ORACLE" exact-version="11.2.0.4.0" exact-driver-version="12.2">
+        <extra-name-characters>$#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>SX_BMP_PORTAL</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="Oracle -" uuid="9285886d-d4c0-42fc-bf46-84cd6a2e6131">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="ORACLE" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>BMP_PORTAL</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="甘肃BMP [2]" uuid="d9141f14-3fff-4afd-9dc6-cbc4ea887100">
+      <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production&#10;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="12.2.0.1.0" dbms="ORACLE" exact-version="11.2.0.4.0" exact-driver-version="12.2">
+        <extra-name-characters>$#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>BMP_PORTAL</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="PUBLIC" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>

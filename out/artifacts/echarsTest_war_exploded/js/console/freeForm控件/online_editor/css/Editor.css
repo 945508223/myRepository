@@ -1,0 +1,155 @@
+.CodeMirror {
+    height: 100% !important;
+    font-size: 14px;
+    line-height: 18px;
+}
+#output {
+    width: 100%;
+    height: 100%;
+}
+#iframeResult {
+    display:block;
+    overflow:hidden;
+    border:0!important;
+    min-width:100px;
+    width:100%;
+    height:100%;
+    background-color:#fff
+}
+.windowLabel {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0);
+    background: rgba(243,245,246,.8);
+    display: inline-block;
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    text-align: center;
+    font-size: 11px;
+    border-radius: 20px;
+    z-index: 30;
+    color: #7f94a1;
+    line-height: 23px;
+    padding: 0 7px;
+}
+.windowLabel .label {
+    color: #23527c;
+}
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #4E5155;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .438rem 1.125rem;
+    font-size: .894rem;
+    line-height: 1.54;
+    border-radius: .25rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.btn-primary {
+    background: #26b4ff;
+}
+.btn-primary:hover {
+    background: #24abf2;
+}
+.btn-primary, .btn-primary:hover {
+    border-color: transparent;
+    color: #fff;
+}
+.btn-sm{
+    padding: .188rem .6875rem;
+    font-size: .75rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+.tool-group {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    height: 33px;
+}
+.error-tip {
+    display: inline-block;
+    color: #a94442;
+    background-color: #f2dede;
+    padding: 6px;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+}
+/*
+ * 文本框中placeholder的样式
+ */
+#splitContainer .cm-s-dracula.CodeMirror {
+    color: rgba(248, 248, 242,0.3) !important;
+}
+#select {
+    height: 26px;
+    outline: none;
+    border-radius: 3px;
+    padding-left: 15px;
+    margin-left: 5px;
+}
+.file-btn {
+    line-height: 22px;
+    width: 270px;
+    border: 1px solid #409EFF;
+    margin-left: 20px;
+    display: none;
+}
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.inputfile + label {
+    font-size: 14px;
+    color: #409eff;
+    background-color: #ecf5ff;
+    border: 1px solid #b3d8ff;
+    display: inline-block;
+    cursor: pointer; /* 小手光标*/
+    padding: 0 10px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background: #409eff;
+    border-color: #409eff;
+    color: #fff;
+}
+.inputfile:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="5.1.0/echarts.min.js"></script>
+    <script src="liquidFill/new2/echarts-liquidfill.min.js"></script>
+    <script src="wordcloud/echarts-wordcloud.min.js"></script>
+
+    <!--   <script  src="../../static/echarts/echarts.min.js"></script>-->
+    <!-- <script  src="liquidFill/new/liquidFillSeries.js"></script>-->
+
+
+</head>
+<body>
+<div id="liquidfill-chart" style="height: 700px;width: 700px"></div>
+
+</body>
+</html>
+
+<script>
+
+    var chart = echarts.init(document.getElementById('liquidfill-chart'));
+    var option = {
+        "title": {
+            "text": "主标题",
+            "subtext": "副标题",
+            "left": "center",
+            "top": "top",
+            "show": false,
+            "link": "",
+            "sublink": "",
+            "padding": 5,
+            "textStyle": {
+                "fontStyle": "normal",
+                "fontWeight": "bolder",
+                "fontFamily": "",
+                "color": "rgb(0, 0, 0)",
+                "fontSize": 20
+            },
+            "subtextStyle": {
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "fontFamily": "",
+                "color": "#aaa",
+                "fontSize": 14
+            }
+        },
+        "tooltip": {
+            "show": true,
+            "trigger": "item",
+            "triggerOn": "mousemove",
+            "backgroundColor": "rgba(50,50,50,0.7)",
+            "textStyle": {
+                "color": "rgba(256, 256, 256,1)",
+                "fontSize": 14,
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "fontFamily": ""
+            }
+        },
+        "toolbox": {
+            "show": false,
+            "left": "auto",
+            "top": "center",
+            "orient": "vertical",
+            "feature": {
+                "dataView": {"show": true, "readOnly": false},
+                "mark": {"show": true},
+                "restore": {"show": true},
+                "saveAsImage": {"show": true}
+            }
+        },
+        "backgroundColor": "rgba(228, 200, 200, 1)",
+        "ds_isRefresh_onTime": false,
+        "ds_refresh_onTime_frequency": 5000,
+        "series": [{
+            "type": "wordCloud",
+            "keepAspect": false,
+            "shape": "pin",
+            "left": "center",
+            "top": "center",
+            "width": "70%",
+            "height": "50%",
+            "right": null,
+            "bottom": null,
+            "sizeRange": ["12", " 50"],
+            "rotationRange": ["0", "20"],
+            "rotationStep": 100,
+            "gridSize": 5,
+            "drawOutOfBound": false,
+            "layoutAnimation": true,
+            "textStyle": {"fontFamily": "Arial", "fontWeight": "lighter"},
+            "emphasis": {"focus": "self", "textStyle": {"textShadowBlur": 30, "textShadowColor": "#9bb8c5"}},
+            "data": [{"name": "数据可视化", "value": 3000}, {"name": "大数据", "value": 2181}, {
+                "name": "云计算",
+                "value": 1386
+            }, {"name": "物联网", "value": 2055}, {"name": "移动互联网", "value": 2467}, {
+                "name": "人工智能",
+                "value": 2244
+            }, {"name": "深度学习", "value": 1898}, {"name": "机器学习", "value": 1484}, {
+                "name": "区块链",
+                "value": 3865
+            }, {"name": "互联网+", "value": 2222}, {"name": "智能合约", "value": 366}, {
+                "name": "比特币",
+                "value": 360
+            }, {"name": "数据挖掘", "value": 273}]
+        }]
+    }
+    chart.setOption(option);
+
+
+</script>
+
+
+
+

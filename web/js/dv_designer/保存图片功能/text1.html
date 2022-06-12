@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+    <title>JS实现Echarts的图表保存为图片功能</title>
+</head>
+
+<body>
+<!--
+一般公共预算     TOTAL_AMT_DESC  GEN_PUB_BUD_AMT
+税占比          TAX_RAT_DESC   SZB
+收入增幅        YEARDCT_DESC    SMPERIOD_ZZL_YB
+-->
+
+<!--<div class="labelalign" style="color:#000000;font-size:12px;">${GEN_PUB_BUD_AMT}<br/>第${TOTAL_AMT_DESC}名</div>-->
+<div>测试</div>
+
+<div class="labelalign" style="color:#000000;font-size:12px;">${GEN_PUB_BUD_YEAR_AMT}亿<br/>第${GEN_PUB_BUD_YEAR_AMT_DESC}名
+</div>
+
+<div class="labelalign" style="color:#000000;font-size:12px;">${GEN_PUB_BUD_AMT}<br/>第${TOTAL_AMT_DESC}名</div>
+
+<div class="labelalign" style="color:#000000;font-size:12px;">${GEN_PUB_BUD_AMT}%<br/>第${TOTAL_AMT_DESC}名</div>
+
+<script>
+    if (checked == "收入增幅") {
+        $("#ctrl_718120-191631659").attr("dv_labelreg", "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">${GEN_PUB_BUD_YEAR_GROPER}%<br/>第${GEN_PUB_BUD_YEAR_GROPER_DESC}名</div>")
+        $("#ctrl_718120-191631659").attr("dv_labelreg_text", "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">${GEN_PUB_BUD_YEAR_GROPER}%<br/>第${EN_PUB_BUD_YEAR_GROPER_DESC}名</div>")
+    }
+    if (checked == "一般公共预算收入") {
+        $("#ctrl_718120-191631659").attr("dv_labelreg", "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">${GEN_PUB_BUD_YEAR_AMT}%<br/>第${GEN_PUB_BUD_YEAR_AMT_DESC}名</div>")
+        $("#ctrl_718120-191631659").attr("dv_labelreg_text", "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">${GEN_PUB_BUD_YEAR_AMT}%<br/>第${GEN_PUB_BUD_YEAR_AMT_DESC}名</div>")
+    }
+    if (checked == "税占比") {
+        $("#ctrl_718120-191631659").attr("dv_labelreg", "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">${TAX_GENPUBDUD_YEAR_PER}%<br/>第${TAX-GENPUBDUD_YEAR_PER_DESC}名</div>")
+        $("#ctrl_718120-191631659").attr("dv_labelreg_text", "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">${TAX_GENPUBDUD_YEAR_PER}%<br/>第${TAX-GENPUBDUD_YEAR_PER}名</div>")
+    }
+
+
+    "<div class=\"labelalign\" style=\"color:#000000;font-size:12px;\">\n" +
+    "        <p style=\"color:#000000\">${TAX_GENPUBDUD_YEAR_PER}%</p>\n" +
+    "        <p>第${TAX-GENPUBDUD_YEAR_PER_DESC}名</p>\n" +
+    "    </div>"
+
+    var spana = $(labelEl).find(".labelalign").find("p")
+</script>
+
+<div class="labelalign" style="color:#000000;font-size:12px;">${TAX_GENPUBDUD_YEAR_PER}%<br/>第${TAX_GENPUBDUD_YEAR_PER_DESC}名
+</div>
+
+
+<div class="labelalign" style="color:#000000;font-size:12px;">
+    <p id="myplabel" style="font-size:12px ;text-align:center">
+        <span style="color:#000000">${GEN_PUB_BUD_YEAR_GROPER}%</span></br>
+        <span style="color:#000000">第${GEN_PUB_BUD_YEAR_GROPER_DESC}名</span>
+    </p>
+</div>
+
+
+
+</body>
+
+
+</html>

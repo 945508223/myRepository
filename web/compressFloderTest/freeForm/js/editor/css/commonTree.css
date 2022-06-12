@@ -1,0 +1,39 @@
+.select {
+    width: calc(100% - 8rem);
+}
+
+.selectLabel {
+    font-weight: bold;
+    height: 100%;
+    width: 8rem;
+    text-align: left;
+    vertical-align: middle;
+    float: left;
+    font-size: 1.2rem;
+    color: #606266;
+    padding: 0 1rem 0 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#commonTree {
+    border: 1px solid #eee;
+    height: 100%;
+    width: 100%;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    height: 5rem !important;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+}
+#input{
+    height: 4rem !important;
+    padding: 0 2rem !important;
+}
+#tree{
+    height: calc(100% - 9rem) !important;
+    padding: 1rem 2rem !important;
+}

@@ -1,0 +1,27 @@
+
+
+.taskDetail span {
+    color: blue;
+    cursor: pointer;
+}
+.taskDetail span:hover {
+    color: rgb(14, 43, 122);
+    color: rgb(169, 205, 224)
+}
+
+.datagrid-header td, .datagrid-body td, .datagrid-footer td{
+    border-bottom-width:1px !important;
+    border-top-width: 0px !important;
+    border-left-width: 0px !important;
+    border-right-width: 0px !important;
+}
+
+
+.jianbian{
+    background:-webkit-linear-gradient(right, #0076ff, #00eaff 40%, #00eaff 40%, #00eaff 20%, #0076ff);/*背景渐变,方向往下，不同颜色的百分比*/
+    -webkit-background-clip:text;/*只有webkit内核支持text的剪切模式，背景裁剪，文字外的区域都被裁剪*/
+    color:transparent;/*透明*/
+}
+.datagrid-body::-webkit-scrollbar-thumb {
+    background: rgba(6,248,251,0)
+}

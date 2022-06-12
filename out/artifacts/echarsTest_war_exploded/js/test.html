@@ -1,0 +1,160 @@
+<!doctype html>
+<html style="height:100%;font-size:14px;">
+
+<head>
+    <meta name="spreadjs culture" content="zh-cn"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.grapecity.com/spreadjs/hosted/css/gc.spread.sheets.excel2013white.12.0.6.css">
+    <script src="http://cdn.grapecity.com/spreadjs/hosted/scripts/gc.spread.sheets.all.12.0.6.min.js" type="text/javascript"></script>
+    <script src="http://cdn.grapecity.com/spreadjs/hosted/scripts/resources/zh/gc.spread.sheets.resources.zh.12.0.6.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>* {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    .sample-tutorial {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+    }</style>
+</head>
+
+<body style="margin:0;position:absolute;top:0;bottom:0;left:0;right:0;font-size:14px;user-select:none;-webkit-user-select: none;overflow:hidden;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'">
+
+
+
+
+
+
+<div class="sample-tutorial">
+    <div id="ss" style="width:100%;height:100%"></div>
+    <div id="vue"></div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        let options = [{TEXT: '选项一', VALUE: '1'}, {TEXT: '选项二', VALUE: '2'}, {TEXT: '选项三', VALUE: '3'}];
+        window.vm = new Vue({
+            el: "#vue",
+            data: {},
+            computed: {},
+            watch: {},
+            methods: {}
+        })
+
+        var spread = new GC.Spread.Sheets.Workbook(document.getElementById('ss'), {
+            sheetCount: 1
+        });
+        var sheet = spread.getActiveSheet();
+        sheet.suspendPaint();
+        sheet.setValue(0, 1, "Autocomplete", GC.Spread.Sheets.SheetArea.colHeader);
+        sheet.getRange(-1, 1, -1, 1).cellType(new VueSelecetCellType(options));
+        sheet.setColumnWidth(1, 200);
+        sheet.resumePaint();
+
+        function VueSelecetCellType(selectOptions) {
+            debugger
+            this.typeName = "MyVueSelecetCellType";
+            this.selectOptions = selectOptions;
+        }
+
+        // 挂在window上, 这样spread可以通过typeName进行查找，主要用在序列化与反序列化以及自定义单元格的复制粘贴
+        window["MyVueSelecetCellType"] = VueSelecetCellType;
+        VueSelecetCellType.prototype = new GC.Spread.Sheets.CellTypes.Base();
+        VueSelecetCellType.prototype.createEditorElement = function (context, cellWrapperElement) {
+            cellWrapperElement.style.overflow = 'visible'
+            let editorContext = document.createElement("div")
+            editorContext.setAttribute("gcUIElement", "gcEditingInput");
+            let editor = document.createElement("div");
+            // 自定义单元格中editorContext作为容器，需要再创建一个child用于挂载，不能直接挂载到editorContext上
+            editorContext.appendChild(editor);
+            return editorContext;
+        };
+
+        VueSelecetCellType.prototype.paint = function (ctx, value, x, y, w, h, style, options) {
+            if (value) {
+                GC.Spread.Sheets.CellTypes.Base.prototype.paint.apply(this, [ctx, value, x, y, w, h, style, options,]);
+            }
+        };
+
+        // 该方法在每次激活编辑状态时触发，触发的顺序是先触发createEditorElement之后再触发activateEditor，
+        //并且activateEditor中可以获取到eContext这个上下文，该上下文就是createEditorElement返回的结果
+        VueSelecetCellType.prototype.activateEditor = function (editorContext, cellStyles, cellRect) {
+
+            if (editorContext) {
+                let _this = this;
+                // 动态创建VUE 组件并挂载到editor
+                const VueSelecetCellTypeComponent = {
+                    props: ['val', 'cellStyle', 'selectOptions'],
+                    data() {
+                        return {
+                            filterable: true,
+                            allowCreate: false
+                        }
+                    },
+                    template: `
+                <div :style="cellStyle"  ref="vueSelectCellRef">
+                 <el-select v-model="val" class="ww hh"
+                    @change="vueSelectCellTypeChange"
+                    :filterable="filterable"
+                    :allow-create="allowCreate">
+                        <el-option
+                            v-for="item in selectOptions"
+                            :key="item.VALUE"
+                            :label="item.TEXT"
+                            :value="item.TEXT">
+                        </el-option>
+                 </el-select>
+                </div>`,
+                    mounted() {
+                    },
+                    methods: {
+                        vueSelectCellTypeChange(val) {
+                            console.log(val);
+                        }
+                    }
+                };
+                // create component constructor
+                const AutoCompleteCtor = Vue.extend(VueSelecetCellTypeComponent);
+                this.vm = new AutoCompleteCtor({
+                    propsData: {
+                        cellStyle: {
+                            width: cellRect.width + 'px',
+                            heigth: cellRect.height + 'px'
+                        },
+                        selectOptions: _this.selectOptions
+                    }
+                }).$mount(editorContext.firstChild);
+            }
+            return editorContext;
+
+        };
+
+        VueSelecetCellType.prototype.deactivateEditor = function (editorContext, context) {
+            // 销毁组件
+            this.vm.$destroy();
+            this.vm = undefined;
+        };
+
+        VueSelecetCellType.prototype.getEditorValue = function (editorContext) {
+            // 设置组件默认值
+            if (this.vm) {
+                return this.vm.val;
+            }
+        };
+        VueSelecetCellType.prototype.setEditorValue = function (editorContext, val) {
+            // 获取组件编辑后的值
+            if (editorContext && val && this.vm) {
+                this.vm.val = val;
+            }
+        };
+    });
+</script>
+</body>
+
+</html>

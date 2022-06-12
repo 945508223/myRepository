@@ -1,0 +1,1 @@
+function parse_XLSBCellParsedFormula(r,a){var e=r.read_shift(4);return parsenoop(r,a-4)}

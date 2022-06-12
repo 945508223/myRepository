@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:color="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>折线图1</title>
+    <script src="/echars/echarts.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<div className="labelalign">
+    <p><span style="font-size: 12px;"><span style="font-size: 14px;"></span><span
+            style="font-size: 24px;"></span></span>
+    </p>
+    <p >句容市:第${TOTAL_AMT_DESC}名</p>
+<div>
+        <div id="main" style="width: 1000px;height:600px;"></div>
+        <script>
+            var chart = echarts.init(document.getElementById('main'));
+
+            option = {
+                title: {
+                    text: '堆叠区域图'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross',
+                        label: {
+                            backgroundColor: '#112885'
+                        }
+                    }
+                },
+                legend: {
+                    data: ['税收', '非税']
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14'],
+
+                    }
+                ],
+                yAxis: [
+                    {
+                        splitLine: {
+                            show: false
+                        },
+                        nameTestStyle: {
+                            color: '#0e2bfd'
+                        },
+                        min: 0,
+                        interval: 20,
+                        type: 'value',
+                        name: '亿元',
+                        axisLine: {
+                            lineStyle: {
+                                color: '#3333'
+                            }
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        name: '税收',
+                        type: 'line',
+                        stack: '总量',
+                        lineStyle: {        // 系列级个性化折线样式
+                            width: 2,
+                            color: "#2086ff" //折线的颜色
+                        },
+                        areaStyle: {
+                            color: {
+                                type: 'linear',
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0, color: '#2086ff' // 0% 处的颜色
+                                }, {
+                                    offset: 1, color: '#03124A' // 100% 处的颜色
+                                }],
+                                global: false // 缺省为 false
+                            }
+                        },
+
+
+                        data: [30, 10, 25, 80, 25, 55, 60, 70, 60, 95, 20, 30],
+                        smooth: true,
+                        symbol: 'none',
+
+                    },
+                    {
+                        name: '非税',
+                        type: 'line',
+                        stack: '总量',
+                        areaStyle: {},
+                        data: [30, 92, 82, 50, 56, 80, 63, 70, 86, 90, 50, 88],
+                        smooth: true,
+                        symbol: 'none',
+                        lineStyle: {
+                            width: 2,
+                            color: "#90FCFF" //折线的颜色
+                        },
+                        areaStyle: {
+                            color: {
+                                type: 'linear',
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0, color: '#31D3FF' // 0% 处的颜色
+                                }, {
+                                    offset: 1, color: '#03124a' // 100% 处的颜色
+                                }],
+                                //  global: false // 缺省为 false
+                            }
+                        },
+
+                    }
+                ]
+            };
+            chart.setOption(option, true);
+        </script>
+</body>
+
+</html>

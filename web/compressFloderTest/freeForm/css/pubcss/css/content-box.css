@@ -1,0 +1,542 @@
+.box {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-list {
+    width: 187px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../CSS/img/zyleftlistbj.png) no-repeat;
+    background-size: 100% 100%;
+    background-position-y: 5px;
+}
+
+.nav-list .nl-top {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    float: left;
+}
+
+.nav-list .nl-top .nlt-a {
+    display: inline-block;
+    color: #63a1c2;
+    font-size: 12px;
+    width: 58px;
+    height: 29px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    background: url(../../CSS/img/nlistm_03.png) no-repeat center;
+    background-size: 100% 100%;
+    margin: 10px 2px 0 2px;
+}
+
+.nav-list .nl-top .nlt-a:hover {
+    background: url(../../CSS/img/nlistx_03.png) no-repeat center;
+    color: #8dd7f9;
+}
+
+.nav-list .nl-top .nlt-a span,
+.nav-list .nl-top .nlt-b span,
+.nav-list .nl-top .nlt-c span {
+    margin-left: 5px;
+    margin-top: -3px;
+}
+
+.nav-list .nl-top .nlt-b {
+    display: inline-block;
+    color: #63a1c2;
+    font-size: 12px;
+    width: 58px;
+    height: 29px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    background: url(../../CSS/img/nlistm_05.png) no-repeat center;
+    background-size: 100% 100%;
+    margin: 10px 2px 0 2px;
+}
+
+.nav-list .nl-top .nlt-b:hover {
+    background: url(../../CSS/img/nlistx_05.png) no-repeat center;
+    color: #8dd7f9;
+}
+
+
+.nav-list .nl-top .nlt-c {
+    display: inline-block;
+    color: #63a1c2;
+    font-size: 12px;
+    width: 58px;
+    height: 29px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    background: url(../../CSS/img/nlistm_07.png) no-repeat center;
+    background-size: 100% 100%;
+    margin: 10px 2px 0 2px;
+}
+
+.nav-list .nl-top .nlt-c:hover {
+    background: url(../../CSS/img/nlistx_07.png) no-repeat center;
+    color: #8dd7f9;
+}
+
+.nav-list .nl-top .nlt-a-active {
+    background: url(../../CSS/img/nlistx_03.png) no-repeat center;
+    color: #8dd7f9;
+}
+
+.nav-list .nl-top .nlt-b-active {
+    background: url(../../CSS/img/nlistx_05.png) no-repeat center;
+    color: #8dd7f9;
+}
+
+.nav-list .nl-top .nlt-c-active {
+    background: url(../../CSS/img/nlistx_07.png) no-repeat center;
+    color: #8dd7f9;
+}
+
+.nav-list .nl-main {
+    width: 184px;
+    height: calc(100% - 64px);
+    height: -webkit-calc(100% - 64px);
+    height: -moz-calc(100% - 64px);
+    float: left;
+    overflow: auto;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background: url(../../CSS/img/zygdbj1.png) repeat-y right, url(../../CSS/img/zygdmy_03.png) repeat-x bottom;
+}
+
+.nav-list .nl-main .nlm-first {
+    width: auto;
+    height: 32px;
+}
+
+.nav-list .nl-main .nlm-active {
+    border-left: 3px solid #5ebbfd;
+    background: linear-gradient(to right, #15487f, #0c275e);
+    filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=1, startColorStr=#15487f, endColorStr=#0c275e);
+    /*IE 6 7 8*/
+    background: -ms-linear-gradient(left, #15487f, #0c275e);
+    /* IE 10 */
+    background: -moz-linear-gradient(left, #15487f, #0c275e);
+    /*火狐*/
+    background: -webkit-gradient(linear, 0% 0%, 60% 0%, from(#15487f), to(#0c275e));
+    /* Safari 4-5, Chrome 1-9*/
+}
+
+.nav-list .nl-main .nlm-first .nlmf-p {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    line-height: 32px;
+}
+
+.nav-list .nl-main .nlm-first .nlmf-p a {
+    margin-left: 5px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+/* <!--中间菜单栏--> */
+.nav-subnav {
+    width: auto;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: -8px;
+}
+
+.nav-subnav .ns-li {
+    display: inline-block;
+    float: left;
+    line-height: 40px;
+    margin-right: 9px;
+}
+
+.nav-subnav .ns-li .nsl-a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.nav-subnav .ns-li .nsl-add {
+    color: #3fc0ff;
+}
+
+.nav-subnav .ns-li .nsl-a img {
+    width: 23px;
+    height: 23px;
+    margin-right: 4px;
+    margin-left: 8px;
+    margin-top: -2px;
+}
+
+.ns-li .nsl-b {
+    background: url(../../CSS/img/zyborder_07.png) no-repeat center;
+    background-size: 100% 33px;
+}
+
+.ns-li .nsl-b span {
+    margin-right: 9px;
+}
+
+.ns-li .nsl-pass {
+    background: url(../../CSS/img/zyaddxuanzhong.png) no-repeat center;
+    background-size: 100% 33px;
+}
+
+
+/* 主体数据 */
+.nav-main {
+    width: calc(100% - 207px);
+    width: -webkit-calc(100% - 207px);
+    width: -moz-calc(100% - 207px);
+    height: calc(100% - 43px);
+    height: -webkit-calc(100% - 43px);
+    height: -moz-calc(100% - 43px);
+    overflow: auto;
+    border: 1px solid #30acf1;
+    border-top: none;
+    position: absolute;
+    left: 196px;
+    top: 42px;
+    background: url(../../CSS/img/zytbbjall_03.png) no-repeat center;
+    background-size: 100% 100%;
+}
+
+/* zytabletop_05 */
+/* .nav-main .nm-table:before {
+    content: "";
+    width: 100%;
+    height: 16px;
+    background: url(../../CSS/img/zytabletop_05.png) no-repeat left top,
+        url(../../CSS/img/zytabletop_07.png) no-repeat right top;
+    position: absolute;
+    z-index: 100;
+
+} */
+
+.ztree li a {
+    color: #ffffff
+}
+
+.ztree * {
+    font-size: 14px;
+}
+
+/* layui-table 数据表样式修改 */
+.layui-table-box,
+.layui-table-box {
+    overflow: visible;
+}
+
+.layui-table,
+.layui-table-view {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #ffffff
+}
+
+.layui-table-view .layui-table {
+    /* position: relative;
+    right: 0;
+    width: 100%; */
+    width: auto;
+}
+
+.layui-table-header {
+    overflow: hidden;
+    border-width: 0;
+}
+
+.layui-table thead tr,
+.layui-table-header {
+    background-color: transparent;
+}
+
+.layui-table-header .layui-table thead tr th .layui-table-cell {
+    text-align: center
+}
+
+.layui-table-body {
+    margin: 0;
+    overflow: auto;
+}
+
+.layui-table-click {
+    background: transparent;
+}
+
+.layui-table tbody tr:hover {
+    background: #0c63ac;
+}
+
+.layui-table-view .layui-table th {
+    padding: 2px 0;
+}
+
+.layui-table[lay-size=sm] th {
+    font-size: 14px;
+}
+
+.layui-table th {
+    background: #0d50db;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 800;
+    height: 35px;
+    vertical-align: middle;
+    position: relative;
+    padding: 0 10px;
+    border: none;
+    padding-left: 1px !important;
+}
+
+.layui-table th:not(:last-child) .layui-table-cell::after {
+    content: "|";
+    color: #537eda;
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    right: -1px;
+}
+
+.layui-table-view .layui-table td {
+    height: 30px;
+    vertical-align: middle;
+    border: 1px solid #2da5e5;
+    border-left: none;
+    border-collapse: collapse;
+    white-space: nowrap;
+    /* 设置内容抵达容器边界会不会转到下一行 */
+    overflow: hidden;
+    /* 不显示超过对象尺寸的内容（这个绝对不能少） */
+    text-overflow: ellipsis;
+}
+
+/* --------------------- */
+/* 分页 */
+.layui-table-page {
+    background-color: #0d50db;
+    border: 1px solid #2da5e5;
+    padding: 7px 0 0;
+    margin-top: 4px;
+}
+
+.layui-table-page .layui-laypage a {
+    width: 16px;
+    color: #fff;
+    margin-bottom: 7px;
+}
+
+.layui-table-page .layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: #0075ff
+}
+
+
+.layui-table-page .layui-laypage span {
+    color: #fff;
+    margin: 0 0 7px;
+}
+
+/* 表格 input check */
+.layui-form-checkbox[lay-skin=primary] {
+    min-width: 12px;
+    min-height: 12px;
+    margin: 10px 0;
+}
+
+.layui-table-view .layui-form-checkbox[lay-skin=primary] i {
+    width: 12px;
+    height: 12px;
+    border: none;
+    line-height: 12px;
+    background-color: #e9e9e9;
+    font-weight: bold
+}
+
+.layui-form-checkbox i,
+.layui-form-checkbox:hover i {
+    color: #e9e9e9;
+}
+
+.layui-form-checked[lay-skin=primary] i {
+    border-color: #ffffff;
+    background-color: #e9e9e9;
+    color: black;
+}
+
+/* 表格 单选框 */
+.layui-table-view .layui-form-radio>i {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.layui-form-radio>i:hover,
+.layui-form-radioed>i {
+    color: #77b4d0;
+}
+
+.layui-table-view .layui-table td {
+    padding: 0 0;
+}
+
+
+.layui-table td,
+.layui-table-view .layui-table td .layui-form-radio div {
+    font-size: 12px;
+}
+
+.layui-table-cell {
+    height: 30px;
+    padding: 1px 15px;
+}
+
+.layui-table-cell .toolbar-btn {
+    padding: 4px 12px;
+    color: #6EA0F5;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 2px;
+    font-weight: bold;
+    border: 1px solid #6EA0F5;
+    background-color: #ECEFF2;
+}
+
+.layui-table-cell .toolbar-btn:hover {
+    background-color: #fff;
+    border: 1px solid rgb(165, 198, 255);
+}
+
+.layui-table-grid-down {
+    background-color: #3b5abe;
+    border-color: cornflowerblue;
+    color: #b8beff;
+}
+
+.layui-table-grid-down:hover {
+    background-color: #255fd6;
+}
+
+
+/* 滚动条 */
+.nl-main-1::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.nl-main-1::-webkit-scrollbar-track {
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+.nl-main-1::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+.nav-main-1::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.nav-main-1::-webkit-scrollbar-track {
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+.nav-main-1::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+.layui-table-body::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 6px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 6px;
+}
+
+.layui-table-body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(134, 156, 255, 0.8);
+    background: rgba(134, 156, 255, 0.5);
+}
+
+.layui-table-body::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* 弹出框样式修改 */
+/* .layui-layer-title {
+    text-indent: 1.5em;
+    color: #ffffff;
+    line-height: 40px;
+    font-size: 16px;
+    background: linear-gradient(to bottom, #73a6fe, #2e62bf);
+    filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=1, startColorStr=#73a6fe, endColorStr=#2e62bf);
+    background: -ms-linear-gradient(top, #73a6fe, #2e62bf);
+    background: -moz-linear-gradient(top, #73a6fe, #2e62bf);
+    background: -webkit-gradient(linear, 0% 0%, 0% 80%, from(#73a6fe), to(#2e62bf));
+} */
+
+
+.layui-layer-iframe .layui-layer-setwin .layui-layer-close1 {
+    overflow: hidden;
+}
+
+.layui-layer-iframe .layui-layer-setwin .layui-layer-close1::after {
+    content: '';
+    display: block;
+    height: 100%;
+    transform: translateX(-100%);
+    background: inherit;
+    filter: drop-shadow(16px 0 0 #fff);
+}
+
+/* 按钮 */
+.ncb-p4-btn2 {
+    background: #eceff2;
+    border: none;
+    border: 1px solid #a7c2f2;
+    height: 26px;
+    margin-left: 20px;
+    color: #578ae5;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.btn {
+    color: #ffffff;
+    background: #6ea0f5;
+}

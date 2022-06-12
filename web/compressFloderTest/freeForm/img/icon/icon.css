@@ -1,0 +1,282 @@
+/* add添加图片的样式 */
+.ns-li-add {
+    background: url(img/add.png) no-repeat center left;
+   
+}
+/* delete 删除图片的样式 */
+.ns-li-delete {
+    background: url(img/delete.png) no-repeat center left;
+   
+}
+/* update 更新图片的样式 */
+.ns-li-update {
+    background: url(img/update.png) no-repeat center left;
+	
+}
+/* search 搜索图片的样式 */
+.ns-li-search {
+    background: url(img/search.png) no-repeat center left;
+	
+}
+/* cxxd 重新下达图片的样式 */
+.ns-li-cxxd {
+    background: url(img/cxxd.png) no-repeat center left;
+	
+}
+/* jgll 结果录入图片的样式 */
+.ns-li-jgll {
+    background: url(img/jgll.png) no-repeat center left;
+	
+}
+/* cancle 取消图片的样式 */
+.ns-li-cancle {
+    background: url(img/cancle.png) no-repeat center left;
+	
+}
+/* affirm 确定图片的样式 */
+.ns-li-affirm {
+    background: url(img/affirm.png) no-repeat center left;
+	
+}
+/* appear 上报图片的样式 */
+.ns-li-appear {
+    background: url(img/appear.png) no-repeat center left;
+	
+}
+/* uploding 上传图片的样式 */
+.ns-li-uploding {
+    background: url(img/uploding.png) no-repeat center left;
+}
+
+/* design 设计图片的样式 */
+.ns-li-design {
+    background: url(img/design.png) no-repeat center left;
+	
+}
+/* set 设置图片的样式 */
+.ns-li-set {
+    background: url(img/set.png) no-repeat center left;
+	
+}
+/* audit 审核图片的样式 */
+.ns-li-audit {
+    background: url(img/audit.png) no-repeat center left;
+	
+}
+/* tianbao 填报图片的样式 */
+.ns-li-tianbao {
+    background: url(img/tianbao.png) no-repeat center left;
+	
+}
+/* xd 下达图片的样式 */
+.ns-li-xd {
+    background: url(img/xd.png) no-repeat center left;
+	
+}
+/* download 下载图片的样式 */
+.ns-li-download {
+    background: url(img/download.png) no-repeat center left;
+	
+}
+/* choose 选择图片的样式 */
+.ns-li-choose {
+    background: url(img/choose.png) no-repeat center left;
+	
+}
+/* browse 浏览图片的样式 */
+.ns-li-browse {
+    background: url(img/browse.png) no-repeat center left;
+	
+}
+
+/* operation 运行图片的样式 */
+.ns-li-operation {
+    background: url(img/operation.png) no-repeat center left;
+	
+}
+/* accessory 附件   斜着    的图片的样式 */
+.ns-li-accessory {
+    background: url(img/accessory.png) no-repeat center left;
+	
+}
+/* accessory2 附件  正着  的图片的样式 */
+.ns-li-accessory2 {
+    background: url(img/accessory2.png) no-repeat center left;
+	
+}
+/* refresh 刷新*/
+.ns-li-refresh {
+    background: url(img/refresh.png) no-repeat center left;
+	
+}
+/* save 保存*/
+.ns-li-save {
+    background: url(img/save.png) no-repeat center left;
+}
+.ns-li-import {
+    background: url(img/save.png) no-repeat center left;
+}
+
+/* derive 导出*/
+.ns-li-derive {
+    background: url(img/derive.png) no-repeat center left;
+}
+.ns-li-export {
+    background: url(img/derive.png) no-repeat center left;
+}
+
+/* 一下是选中样式  hover  */
+
+
+
+
+/* accessory2 附件  正着  的图片的样式 */
+.ns-li-refresh:hover{
+    background: url(img/refresh_hover.png) no-repeat center left;
+	
+}
+/* accessory2 附件  正着  的图片的样式 */
+.ns-li-accessory2:hover{
+    background: url(img/accessory2_hover.png) no-repeat center left;
+	
+}
+/* accessory 附件   斜着    的图片的样式 */
+.ns-li-accessory:hover{
+    background: url(img/accessory_hover.png) no-repeat center left;
+	
+}
+/* operation 运行图片的样式 */
+.ns-li-operation:hover{
+    background: url(img/operation_hover.png) no-repeat center left;
+	
+}
+/* browse 浏览图片的样式 */
+.ns-li-browse:hover{
+    background: url(img/browse_hover.png) no-repeat center left;
+	
+}
+/* choose 选择图片的样式 */
+.ns-li-choose:hover{
+    background: url(img/choose_hover.png) no-repeat center left;
+	
+}
+/* download 下载图片的样式 */
+.ns-li-download:hover {
+    background: url(img/download_hover.png) no-repeat center left;
+	
+}
+/* xd 下达图片的样式 */
+.ns-li-xd:hover{
+    background: url(img/xd_hover.png) no-repeat center left;
+	
+}
+/* tianbao 填报图片的样式 */
+.ns-li-tianbao:hover{
+    background: url(img/tianbao_hover.png) no-repeat center left;
+	
+}
+/* audit 审核图片的样式 */
+.ns-li-audit:hover{
+    background: url(img/audit_hover.png) no-repeat center left;
+	
+}
+/* set 设置图片的样式 */
+.ns-li-set:hover{
+    background: url(img/set_hover.png) no-repeat center left;
+	
+}
+/* design 设计图片的样式 */
+.ns-li-design:hover{
+    background: url(img/design_hover.png) no-repeat center left;
+	
+}
+/* uploding 上传图片的样式 */
+.ns-li-uploding:hover{
+    background: url(img/uploding_hover.png) no-repeat center left;
+	
+}
+/* appear 上报图片的样式 */
+.ns-li-appear:hover{
+    background: url(img/appear_hover.png) no-repeat center left;
+	
+}
+/* affirm 确定图片的样式 */
+.ns-li-affirm:hover{
+    background: url(img/affirm_hover.png) no-repeat center left;
+	
+}
+/* cancle 取消图片的样式 */
+.ns-li-cancle:hover{
+    background: url(img/cancle_hover.png) no-repeat center left;
+	
+}
+/* jgll 结果录入图片的样式 */
+.ns-li-jgll:hover{
+    background: url(img/jgll_hover.png) no-repeat center left;
+	
+}
+/* cxxd 重新下达图片的样式 */
+.ns-li-cxxd:hover{
+    background: url(img/cxxd_hover.png) no-repeat center left;
+	
+}
+/* search 搜索图片的样式 */
+.ns-li-search:hover{
+    background: url(img/search_hover.png) no-repeat center left;
+	
+}
+/* add添加图片的样式 */
+.ns-li-add:hover{
+    background: url(img/add_hover.png) no-repeat center left;
+    
+}
+/* delete 删除图片的样式 */
+.ns-li-delete:hover{
+    background: url(img/delete_hover.png) no-repeat center left;
+    
+}
+/* update 更新图片的样式 */
+.ns-li-update:hover{
+    background: url(img/update_hover.png) no-repeat center left;
+}
+/* save 保存*/
+.ns-li-save:hover{
+    background: url(img/save_hover.png) no-repeat center left;
+}
+.ns-li-import:hover{
+    background: url(img/save_hover.png) no-repeat center left;
+}
+
+/* derive 导出*/
+.ns-li-derive:hover {
+    background: url(img/derive_hover.png) no-repeat center left;
+}
+.ns-li-export:hover {
+    background: url(img/derive_hover.png) no-repeat center left;
+}
+/* refresh 刷新*/
+.ns-li-refresh:hover{
+    background: url(img/refresh_hover.png) no-repeat center left;
+	
+}
+
+
+
+
+
+/* 左边的二级菜单栏的图标 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

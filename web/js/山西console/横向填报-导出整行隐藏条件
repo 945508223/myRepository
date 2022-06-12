@@ -1,0 +1,75 @@
+表1: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表2: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表3: (parseFloat(${-1,2}+${-1,3}+${-1,5}+${-1,6}+${-1,8}).toFixed(2)==0||${-1,2}+${-1,3}+${-1,5}+${-1,6}+${-1,8}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表4: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表5: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表6: (parseFloat(${-1,4}+${-1,5}).toFixed(2)==0||${-1,4}+${-1,5}=='')&&${V.allZeroHideExport}==true&&${-1,1}
+
+表7: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表8: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表9: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表10: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表11: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表12: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表13: (parseFloat(${-1,2}+${-1,3}+${-1,4}+${-1,5}).toFixed(2)==0||${-1,2}+${-1,3}+${-1,4}+${-1,5}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表14: (parseFloat(${-1,2}+${-1,3}+${-1,4}+${-1,5}).toFixed(2)==0||${-1,2}+${-1,3}+${-1,4}+${-1,5}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表15: (parseFloat(${-1,2}).toFixed(2)==0||${-1,2}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表16: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表17: (parseFloat(${-1,2}).toFixed(2)==0||${-1,2}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表18: (parseFloat(${-1,2}+${-1,3}+${-1,7}+${-1,8}+${-1,9}+${-1,13}).toFixed(2)==0||${-1,2}+${-1,3}+${-1,7}+${-1,8}+${-1,9}+${-1,13}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!=='编码'
+
+表19: (parseFloat(${-1,4}+${-1,5}+${-1,9}).toFixed(2)==0||${-1,4}+${-1,5}+${-1,9}=='')&&${V.allZeroHideExport}==true&&${-1,1}
+
+表20: (parseFloat(${-1,2}+${-1,6}+${-1,7}).toFixed(2)==0||${-1,2}+${-1,6}+${-1,7}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表21: (parseFloat(${-1,4}).toFixed(2)==0||${-1,4}='')&&${V.allZeroHideExport}==true&&${-1,1}
+
+表22: (parseFloat(${-1,3}+${-1,4}+${-1,5}).toFixed(2)==0||${-1,3}+${-1,4}+${-1,5}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表23: (parseFloat(${-1,4}+${-1,5}).toFixed(2)==0||${-1,4}+${-1,5}=='')&&${V.allZeroHideExport}==true&&${-1,1}
+
+表24: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表25: (parseFloat(${-1,2}+${-1,4}+${-1,6}).toFixed(2)==0||${-1,2}+${-1,4}+${-1,6}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表26: (parseFloat(${-1,5}+${-1,7}).toFixed(2)==0||${-1,5}+${-1,7}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表27: (parseFloat(${-1,2}).toFixed(2)==0||${-1,2}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表28: (parseFloat(${-1,4}+${-1,5}).toFixed(2)==0||${-1,4}+${-1,5}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表29: (parseFloat(${-1,3}+${-1,2}).toFixed(2)==0||${-1,3}+${-1,2}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表30: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表31: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表32: (parseFloat(${-1,2}+${-1,3}).toFixed(2)==0||${-1,2}+${-1,3}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表33: (parseFloat(${-1,4}+${-1,5}).toFixed(2)==0||${-1,4}+${-1,5}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表34: (parseFloat(${-1,3}+${-1,4}).toFixed(2)==0||${-1,3}+${-1,4}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+表35: (parseFloat(${-1,2}).toFixed(2)==0||${-1,2}=='')&&${V.allZeroHideExport}==true&&${-1,1}&&${-1,1}!='编码'
+
+
+
+
+
+

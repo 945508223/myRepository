@@ -1,0 +1,23 @@
+#topDiv{
+    height: calc(100% - 4rem - 1px)
+}
+#bottomDiv{
+    height: 4rem;
+}
+#bottomDivInner{
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.el-divider--horizontal {
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin: 0rem 0 !important;
+}
+.formPadding{
+    padding-right: 6rem;
+    padding-top: 2rem;
+}
+.el-input-group__append{
+    padding: 0 2rem;
+}

@@ -1,0 +1,261 @@
+/*rem*/
+:root {
+    font-size: 12px;
+}
+/*html body*/
+html,body{
+    height: 100%;height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/****通用**************************************************************************************/
+/*高度*/
+.hh{
+    height: 100%;
+}
+/*宽度*/
+.ww{
+    width: 100%;
+}
+/*悬浮居左*/
+.float-l{
+    float: left;
+}
+/*悬浮居右*/
+.float-r{
+    float: right;
+}
+/*加粗*/
+.text-b{
+    font-weight: bold;
+}
+/*背景白色*/
+.bg-f{
+    background: #ffffff;
+}
+/*背景透明*/
+.bg-t{
+    background: transparent;
+}
+/*margin*/
+.mar-a{
+    margin: auto;
+}
+/*白色*/
+.color-f{
+    color: #fff;
+}
+/*黑色*/
+.color-0{
+    color: #000;
+}
+/*文本超出显示点*/
+.text-p{
+    overflow: hidden; /*溢出隐藏*/
+    text-overflow: ellipsis; /*以省略号...显示*/
+    white-space: nowrap; /*强制不换行*/
+}
+/*文字居居中*/
+.text-cc{
+    margin: auto;
+    text-align: center;
+    align-items:center;
+    justify-content:center;
+    display:-webkit-flex;
+}
+/*文字居左*/
+.text-cl{
+    margin: auto;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start;
+    display: -webkit-flex;
+    padding-left: 5px;
+}
+/*文字居右*/
+.text-cr{
+    margin: auto;
+    text-align: right;
+    align-items: center;
+    justify-content: flex-end;
+    display: -webkit-flex;
+    padding-right: 5px;
+}
+/*文字垂直居中*/
+.text-cz {
+    word-wrap: break-word; /*英文的时候需要加上这句，自动换行*/
+    writing-mode: vertical-rl; /*从左向右 从右向左是 writing-mode: vertical-rl;*/
+    writing-mode: tb-rl; /*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
+    text-align: center;
+    padding: 0px;
+    display: flex;
+    -webkit-display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+    /* vertical-align: middle; */
+    letter-spacing:0.5rem;
+    line-height:1.5rem;
+    justify-content: center;
+}
+/*首行缩进*/
+.text-indent{
+    text-indent:2em;
+}
+/*简单文字居左*/
+.text-al{
+    text-align: left;
+}
+/*简单文字居右*/
+.text-ar{
+    text-align: right;
+}
+/*上下居中*/
+.text-vam{
+    vertical-align: middle;
+}
+/*居中*/
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*居左*/
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+/*居右*/
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+/*两端对齐*/
+.around{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/*两边对齐*/
+.between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*鼠标手样式*/
+.cursor{
+    cursor: pointer;
+}
+/*定位*/
+.pos-r{
+    position: relative;
+}
+.pos-a{
+    position: absolute;
+}
+.pos-f{
+    position: fixed;
+}
+/*禁止选择*/
+.unselect{
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+/*隐藏*/
+.y-hide{
+    display: none;
+}
+/*显示*/
+.y-show{
+    display: block;
+}
+/*超出自适应*/
+.over-a{
+    overflow: auto;
+}
+/*超出隐藏*/
+.over-h{
+    overflow:hidden;
+}
+/*超出滚动*/
+.over-s{
+    overflow: scroll;
+}
+/*超出点显示*/
+.ellipsis_o{
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.ellipsis_t{
+    word-wrap: break-word;/*自动换行*/
+    text-overflow: ellipsis;/*超出部分省略号显示*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;/*自动换行后，多行显示，设置多少行后不在换行而是省略号显示*/
+    overflow: hidden;
+}
+
+/*ztree*/
+.ztree li span {
+    line-height: 1.4rem !important;
+    margin-right: 0.15rem !important;
+}
+.ztree *{
+    font-size: 1rem !important;
+}
+.ztree li a.curSelectedNode{
+    height: 1.6rem !important;
+}
+.ztree li {
+    line-height: 1.2rem;
+}
+.ztree li a{
+    height: 1.4rem;
+}
+/*搜索*/
+#searchBox .textbox .textbox-addon .textbox-icon {
+    width: 1.5rem !important;
+    height: 2.2rem !important;
+    margin-right: 0.5rem !important;
+    margin-top: 0.1rem;
+}
+#search_box .textbox .textbox-addon .textbox-icon {
+    width: 1.5rem !important;
+    height: 2.2rem !important;
+    margin-right: 0.5rem !important;
+    margin-top: 0.1rem;
+}
+/*滚动条*/
+*::-webkit-scrollbar {
+    width: 0.6rem;
+    height: 0.6rem;
+}
+*::-webkit-scrollbar-track, *::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+}
+*::-webkit-scrollbar-thumb {
+    background: #cfcfd1;
+}
+*::-webkit-scrollbar-track {
+    background: #f7f7f7;
+}
+.layui-layer-iframe{
+    overflow: hidden !important;
+}
+/*结束*/
+@font-face {
+    font-family: 'lcd';
+    src: url('../../icons/lcd.woff') format('woff'), /* Modern Browsers */
+    url('../../icons/lcd.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+.lcdFont{
+    font-family: lcd !important;
+}

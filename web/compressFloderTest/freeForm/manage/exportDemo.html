@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="table1" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <td>序号</td>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>兴趣</td>
+                <td>身份证号</td>
+                <td>手机号</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>18</td>
+                <td>打游戏</td>
+                <td>320322184087562589</td>
+                <td>1374569821</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>李四</td>
+                <td>88</td>
+                <td>看电影</td>
+                <td>420322184087562589</td>
+                <td>2374569821</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>王五</td>
+                <td>81</td>
+                <td>睡觉</td>
+                <td>520322184087562589</td>
+                <td>3374569821</td>
+            </tr>
+            <tr>
+                <td colspan="4">这是一个合并单元格</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="btn" onclick="btn_export()">导出</button>
+    <button id="btn2" onclick="exportExcel()">导出</button>
+</body>
+<script src="FileSaver.js-master/src/FileSaver.js"></script>
+<script src="js-xlsx-master/dist/xlsx.extendscript.js"></script>
+<script src="js-xlsx-master/dist/xlsx.full.min.js"></script>
+
+<script src="export.js"></script>
+<script>
+    //定义导出Excel表格事件
+    function exportExcel() {
+        /* 从表生成工作簿对象 */
+        var wb = XLSX2.utils.table_to_book(document.querySelector("#table1"));
+        /* 获取二进制字符串作为输出 */
+        var wbout = XLSX2.write(wb, {
+            bookType: "xlsx",
+            bookSST: true,
+            type: "array"
+        });
+        try {
+            saveAs(
+                //Blob 对象表示一个不可变、原始数据的类文件对象。
+                //Blob 表示的不一定是JavaScript原生格式的数据。
+                //File 接口基于Blob，继承了 blob 的功能并将其扩展使其支持用户系统上的文件。
+                //返回一个新创建的 Blob 对象，其内容由参数中给定的数组串联组成。
+                new Blob([wbout], { type: "application/octet-stream" }),
+                //设置导出文件名称
+                "sheetjs.xlsx"
+            );
+        } catch (e) {
+            if (typeof console !== "undefined") console.log(e, wbout);
+        }
+        return wbout;
+    }
+    function btn_export() {
+        var table1 = document.querySelector("#table1");
+        var opt = {
+            rowIndex: 4
+        }; //开头空4行
+        var sheet = XLSX2.utils.table_to_sheet(table1, opt);
+        sheet["A1"] = {
+            t: "s",
+            v: '三鹿集团有限公司'
+        }; //给A1单元格赋值
+        sheet["A1"].s = {
+            font: {
+                name: '宋体',
+                sz: 24,
+                bold: true,
+                underline: true,
+                color: {
+                    rgb: "FFFFAA00"
+                }
+            },
+            alignment: {
+                horizontal: "center",
+                vertical: "center",
+                wrap_text: true
+            },
+            fill: {
+                bgColor: {
+                    rgb: 'ffff00'
+                }
+            }
+        };
+        //["!merges"]这个属性是专门用来进行单元格合并的 
+        sheet["!merges"].push({ //如果不为空push 为空 = 赋值
+            //合并单元格 index都从0开始
+            s: { //s开始
+                c: 0, //开始列
+                r: 0 //开始行
+            },
+            e: { //e结束
+                c: 3, //结束列
+                r: 2 //结束行
+            }
+        });
+        sheet["A9"].s = { //样式
+            font: {
+                sz: 13,
+                bold: true,
+                color: {
+                    rgb: "FFFFAA00"
+                }
+            },
+            alignment: {
+                horizontal: "center",
+                vertical: "center",
+                wrap_text: true
+            }
+        };
+
+        sheet["!cols"] = [{
+            wpx: 70
+        }, {
+            wpx: 70
+        }, {
+            wpx: 70
+        }, {
+            wpx: 70
+        }, {
+            wpx: 150
+        }, {
+            wpx: 120
+        }]; //单元格列宽
+
+        openDownloadDialog(sheet2blob(sheet), '下载.xlsx');
+    }
+</script>
+
+</html>

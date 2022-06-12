@@ -1,0 +1,125 @@
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, select, textarea, menu {
+    margin: 0;
+    padding: 0;
+}
+
+.ycd_btn_base {
+    width: 100px;
+}
+
+.collect_div {
+    padding: 20px;
+    width: 290px;
+    height: 200px;
+    background-color: #f5f5f5;
+    font-size: 13px;
+}
+
+.collect_div ul {
+    list-style: none;
+}
+
+.collect_div li {
+    padding: 6px 0;
+    color: #666;
+    overflow: auto;
+    max-height: 60px;
+}
+
+.collect_div li span {
+    line-height: 22px;
+    margin-right: 20px;
+    text-align: right;
+    width: 64px;
+    float: left;
+}
+
+.li_active {
+    border: 1px solid #8bc9e0;
+    background: #fff;
+    border-radius: 3px;
+}
+
+table tr {
+    height: 28px;
+    line-height: 28px;
+}
+
+table tr td select {
+    width: 164px;
+    height: 27px;
+}
+.ycdpw-footer-main {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #EEEEEE;
+    height: 45px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.ycdpw-footer-content {
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    right: 20%;
+}
+.ycdpw-footer-button {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    border: 1px solid #ABC7F9;
+    background-color: #ECEFF2;
+    margin: 0;
+    padding: 0 8px;
+    font-size: 12px;
+    cursor: pointer;
+    min-width: 80px;
+    height: 26px;
+    line-height: 26px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: #6EA0F5;
+    outline: none;
+}
+.ycdpw-footer-button i {
+    margin-top:2px;
+    margin-right: 4px;
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    vertical-align: text-top;
+    display: inline-block;
+}
+.ycd-icon-ok {
+    background: url(../../img/icon/tubiao__ok.png) no-repeat center;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+}
+.ycd-icon-cancel {
+    background: url(../../img/icon/tubiao__cancel.png) no-repeat center;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+}
+.ycdpw-footer-button:hover {
+    background-color: #E5F1FB;
+    color: #6EA0F5;
+    border: 1px solid #6EA0F5;
+}
+#propertyForm{
+    width: 100%;height: 100%;
+}
+#ctrlname{
+    display: none;
+}
+#p_guid{
+    display: none;
+}
+#page{width:100%; height:calc(100% - 40px);padding-top:0px;}
+#mytable{border-collapse:separate; border-spacing:10px 22px; margin:0 auto;}

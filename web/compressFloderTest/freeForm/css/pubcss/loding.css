@@ -1,0 +1,85 @@
+@CHARSET "UTF-8";
+	/*
+ * Baseline styles
+ */
+#scro {
+    width: calc(100%);
+    height: 100%;
+    background-color: rgba(0,0,0,0.15);
+    /* border-radius: 50%; */
+    left: 0;
+    top: 0;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+}
+h2 {
+  color: dimgrey;
+  margin: 0;
+  font-size:20px ;
+  font-weight: bold;
+  /* font: 16px verdana;
+  text-transform: uppercase; */
+  letter-spacing: 2px;
+}
+
+/*
+ * Loading Dots
+ * Can we use pseudo elements here instead :after?
+ */
+.loading span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+  background: #007DB6;
+  border-radius: 10px;
+  animation: loading 1s infinite alternate;
+}
+
+/*
+ * Dots Colors
+ * Smarter targeting vs nth-of-type?
+ */
+.loading span:nth-of-type(2) {
+  background: #699ffb;
+  animation-delay: 0.2s;
+}
+.loading span:nth-of-type(3) {
+  background: #699ffb;
+  animation-delay: 0.4s;
+}
+.loading span:nth-of-type(4) {
+  background: #699ffb;
+  animation-delay: 0.6s;
+}
+.loading span:nth-of-type(5) {
+  background: #699ffb;
+  animation-delay: 0.8s;
+}
+.loading span:nth-of-type(6) {
+  background: #699ffb;
+  animation-delay: 1.0s;
+}
+.loading span:nth-of-type(7) {
+  background: #699ffb;
+  animation-delay: 1.2s;
+}
+
+/*
+ * Animation keyframes
+ * Use transition opacity instead of keyframes?
+ */
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#titl{
+	margin-bottom: 5px;
+}
